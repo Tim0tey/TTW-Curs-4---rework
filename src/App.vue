@@ -7,14 +7,21 @@ import { onMounted} from 'vue'
  onUpdate(() => {
   console.log('App updated')
  })
+ const message = "Hello people from earth!"
 </script>
 
 <template>
   <h1>You did it!</h1>
+  <button  @click = " console.log('Button clicked')">Click me>
+  </button>
+
   <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
+    {{ message }}
   </p>
+  <br>
+  <input type="text" 
+  @change="console.log('Text changed')"
+  @input ="console.log('Ypu have typed')">
 </template>
 
 <style scoped></style>
