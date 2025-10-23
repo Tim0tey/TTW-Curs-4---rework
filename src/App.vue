@@ -1,4 +1,13 @@
-<script setup></script>
+<script setup>
+import { onMounted} from 'vue'
+ onMounted(() => {
+  console.log('App mounted')
+ })
+
+ onUpdate(() => {
+  console.log('App updated')
+ })
+</script>
 
 <template>
   <h1>You did it!</h1>
