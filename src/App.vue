@@ -1,19 +1,23 @@
 <script setup>
-import { onMounted} from 'vue'
+import { onMounted, onUpdated} from 'vue'
  onMounted(() => {
   console.log('App mounted')
  })
 
- onUpdate(() => {
+ onUpdated(() => {
   console.log('App updated')
  })
- const message = "Hello people from earth!"
+ import { ref } from 'vue'
+const message = ref("Hello from vue")
+
+const ClickHandler = () => {
+  message.value = "Button clicked"
+}
 </script>
 
 <template>
   <h1>You did it!</h1>
-  <button  @click = " console.log('Button clicked')">Click me>
-  </button>
+  <button  @click = " console.log('Button clicked')">Click me</button>
 
   <p>
     {{ message }}
@@ -21,7 +25,7 @@ import { onMounted} from 'vue'
   <br>
   <input type="text" 
   @change="console.log('Text changed')"
-  @input ="console.log('Ypu have typed')">
+  @input ="console.log('Yu have typed')">
 </template>
 
 <style scoped></style>
