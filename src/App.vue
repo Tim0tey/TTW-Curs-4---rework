@@ -6,7 +6,6 @@ import StuedntsGrades from './components/StuedntsGrades.vue'
 import BlindLink from './components/BlindLink.vue'
 import { onMounted, onUpdated } from 'vue'
 import BootstrapIcons from './components/BootstrapIcons.vue'
-import BootstrapIcons from './components/BootstrapIcons.vue'
 
 
 onMounted(() => {
