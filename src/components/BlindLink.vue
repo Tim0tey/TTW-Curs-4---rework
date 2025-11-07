@@ -1,9 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-const link = ref ('https://emanuel.ro')
-const target = ref("_blank")
+import{ref} from 'vue'
+const link = ref('https://emanuel.ro/')
 </script>
 
+
 <template>
-<a :href="link" target="_blank">Go to link</a>
+<br>
+  <a :href="link" target="_blank">Visit Emanuel website</a>
+  <br>
 </template>

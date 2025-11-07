@@ -1,10 +1,8 @@
 <script setup>
-defineProps(['icon'])
+defineProps (['icon'])
 defineEmits(['iconClick'])
-
 </script>
 
 <template>
-    <h3>Bootstrap Icons <i :class = "`bi bi -airplane-${icon}`"></i></h3>
+  <i :class="`bi bi-${icon}`" @click="$emit('iconClick')"></i>
 </template>
-

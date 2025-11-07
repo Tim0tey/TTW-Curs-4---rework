@@ -1,23 +1,19 @@
-<script>
-import { ref } from 'vue';
-const message = ref('Button clicked!');
-const link = ref('https://emanuel.ro/');
+<script setup>
+import{ref} from 'vue'
+const students = ref([
+  {name:'Miriam', grade:10},
+  {name:'Leo', grade:9},
+  {name:'Patrick',grade: 8},
+  {name:'Andrei',grade: 7}
+  ])
 </script>
 
 <template>
-     <a :href="link" target="_blank">Go to the link!</a>
-  <div v-if="Math.random() > 0.5">
-    <p>Random number is greater than 0.5</p>
-  </div>
-  <div v-else>
-    <p>Random number is less than or equal to 0.5</p>
-  </div>
-
-  <h1>You did it!</h1>
-  <button @click="clickHandler">Click me</button>
-  <p>{{ message }}</p>
-  <br>
-  <input type="text" v-model="message" @change="console.log('Input changed!')"
-    @input="console.log('You have typed: ' + $event.target.value)" @keyup="console.log('Key up event detected!')" />
-  </br>
+ <hr>
+  <h3>Test v-for</h3>
+  <ul>
+    <li v-for="(student, index) of students" :key="index">
+      Name {{ student.name }} > Grade {{ student.grade }}
+    </li>
+  </ul>
 </template>
