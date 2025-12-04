@@ -8,12 +8,12 @@ const coursEURRON = ref(4.99)
 
 const computeEURtoRON = (value) => {
     currencyEUR.value = value;
-    currencyRON.value = (value*4.9).toFixed(2);
+    currencyRON.value = (value * coursEURRON).toFixed(2);
 };
 
 const computeRONtoEUR = (value) => {
     currencyEUR.value = value;
-    currencyRON.value = (value/4.9).toFixed(2);
+    currencyRON.value = (value / coursEURRON).toFixed(2);
 };
 
 const recalculateCurrency = () => {
