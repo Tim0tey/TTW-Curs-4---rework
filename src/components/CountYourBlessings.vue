@@ -1,4 +1,8 @@
 <script setup>
+
+import { useCounter } from '@/stores/counter'
+const counterStore = useCounter()
+
 const props= defineProps(['startCount'])
 
 import{ref} from 'vue'
@@ -11,7 +15,8 @@ const incrementCounter = () =>{
 
 <template>
   <h3>Counter</h3>
-  <button @click="counter++">Increment v1</button>
-  <button @click="incrementCounter">Increment v2</button>
+  <button class="bored" @click="counter++">Increment v1</button>
+  <button class="bored" @click="incrementCounter">Increment v2</button>
+  <button class="bored" @click="counterStore++">Increment v3</button>
   <div>{{ counter }}</div>
 </template>
