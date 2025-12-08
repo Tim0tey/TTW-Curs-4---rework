@@ -17,6 +17,6 @@ const incrementCounter = () =>{
   <h3>Counter</h3>
   <button class="bored" @click="counter++">Increment v1</button>
   <button class="bored" @click="incrementCounter">Increment v2</button>
-  <button class="bored" @click="counterStore++">Increment v3</button>
+  <button class="bored" @click="counterStore.count++">Increment v3</button>
   <div>{{ counter }}</div>
 </template>
